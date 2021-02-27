@@ -37,6 +37,9 @@ class ProductControllerTest extends PantherTestCase
         $searchForm = $crawler->selectButton('Search')->form();
         $searchForm->setValues(['q' => 'dis']);
 
+        // wait for the AJAX to load
+        $client->waitForElementToContain('.search-preview', 'Disk');
+
         $this->assertCount(
             2,
             $crawler->filter('.search-preview .list-group-item')
