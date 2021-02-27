@@ -75,4 +75,9 @@ class Color
     {
         return hexdec(substr($this->hexColor, 4, 2));
     }
+
+    public function __toString()
+    {
+        return (string) $this->name;
+    }
 }
