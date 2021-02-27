@@ -1,0 +1,19 @@
+<div class="component-light product-show p-3 mb-5">
+    <h5 class="text-center">Featured Product!</h5>
+    <a href="{{ path('app_product', { id: featuredProduct.id }) }}">
+        <img
+            alt="{{ featuredProduct.name }}"
+            src="{{ asset('/uploads/products/'~featuredProduct.imageFilename) }}"
+            class="d-block"
+        >
+    </a>
+    <div class="pt-3">
+        <h6>
+            {{ featuredProduct.name }}
+
+            {{ featuredProduct.priceString|format_currency('USD') }}
+        </h6>
+
+        {{ include('product/_cart_add_controls.html.twig') }}
+    </div>
+</div>

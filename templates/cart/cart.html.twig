@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <aside class="col-xs-12 col-lg-3">
+                {% if featuredProduct %}
+                    {{ include('cart/_featuredSidebar.html.twig') }}
+                {% endif %}
+            </aside>
+
+            <div class="col-xs-12 col-lg-9 cart">
+                <h1>Shopping Cart</h1>
+                <div class="component-light p-3">
+                    <div>
+                        <div class="row p-3">
+                            <div class="col-3">
+                                Item Name
+                            </div>
+                            <div class="col-3">
+                                Quantity
+                            </div>
+                            <div class="col-3">
+                                Price
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+                        {% for item in cart.items %}
+                            <div
+                                class="cart-item row p-3"
+                                {{ stimulus_controller('submit-confirm') }}
+                            >
+                                <div class="col-2">
+                                    {{ item.product.name }}
+                                </div>
+                                <div class="col-1">
+                                    {% if item.color %}
+                                        <span class="color-square" style="background-color: rgb({{ item.color.red }}, {{ item.color.green }}, {{ item.color.blue }});"></span>
+                                    {% endif %}
+                                </div>
+                                <div class="col-3">
+                                    {{ item.quantity }}
+                                </div>
+                                <div class="col-3">
+                                    {{ item.totalString|format_currency('USD') }}
+                                </div>
+                                <div class="col-3">
+                                    <form
+                                        action="{{ path('app_cart_remove_item', {
+                                            productId: item.product.id,
+                                            colorId: item.color ? item.color.id: null,
+                                        }) }}"
+                                        method="POST"
+                                        data-action="submit-confirm#onSubmit"
+                                    >
+                                        <input type="hidden" name="_token" value="{{ csrf_token('remove_item') }}" />
+
+                                        <button class="btn btn-info btn-sm">
+                                            Remove
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="col-12">
+                                Your cart is empty! Get to shopping!
+                            </div>
+                        {% endfor %}
+
+                        {% if cart.items|length > 0 %}
+                        <div class="p-3">
+                            Total: <strong>{{ cart.totalString|format_currency('USD') }}</strong>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    {% if cart.items|length > 0 %}
+                    <div>
+                        <a href="{{ path('app_checkout') }}" class="btn btn-primary">
+                            Check Out &gt;&gt;
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

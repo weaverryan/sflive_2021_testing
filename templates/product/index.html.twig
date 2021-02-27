@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <aside class="col-xs-12 col-3">
+                {{ include('product/_categoriesSidebar.html.twig') }}
+            </aside>
+
+            <div class="col-xs-12 col-9">
+
+                <div data-controller="counter">
+                    <button
+                        data-action="counter#increment"
+                        class="btn btn-primary btn-sm"
+                    >
+                        Click me!
+                    </button>
+
+                    <br>
+
+                    I have been clicked
+                    <span data-counter-target="count">0</span>
+                    times!
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <h1>
+                            {% if currentCategory %}
+                                {{ currentCategory.name }}
+                            {% else %}
+                                All Products
+                            {% endif %}
+                        </h1>
+                    </div>
+                    <div class="col-9">
+                        <form>
+                            <div
+                                class="input-group"
+                                {{ stimulus_controller('search-preview', {
+                                    url: path('app_homepage')
+                                }) }}
+                            >
+                                <input
+                                    name="q"
+                                    value="{{ searchTerm }}"
+                                    placeholder="Search products..."
+                                    type="search"
+                                    class="form-control"
+                                    data-action="search-preview#onSearchInput"
+                                >
+
+                                <div
+                                    class="search-preview"
+                                    data-search-preview-target="result"
+                                ></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    {% for product in products %}
+                        <div class="col-xs-12 col-6 mb-2 pb-2">
+                            <div class="component-light">
+                                <div class="product-image">
+                                    <a href="{{ path('app_product', { id: product.id }) }}">
+                                        <img
+                                            alt="{{ product.name }}"
+                                            src="{{ asset('/uploads/products/'~product.imageFilename) }}"
+                                            class="d-block mb-2"
+                                        >
+                                    </a>
+                                    <h3 class="font-weight-bold mb-2 px-2">
+                                        <a href="{{ path('app_product', { id: product.id }) }}">
+                                            {{ product.name }}
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div
+                                    class="p-2 my-3 d-md-flex justify-content-between">
+                                    <p class="p-0 d-inline">
+                                        <strong>{{ product.priceString|format_currency('USD') }}</strong>
+                                    </p>
+                                    <a href="{{ path('app_product', { id: product.id }) }}" class="btn btn-info">View Product</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="px-2 pb-2">
+                                <small>brought to you by {{ product.brand }}</small>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="col-12">
+                            <h5 class="ml-4 mt-4" >
+                                Whoopsie Daisy, no products found!
+                            </h5>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="row">
+                    <span class="p-3">
+                        Shipping takes 10-13 weeks, and products probably won't work
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
