@@ -1,0 +1,17 @@
+diff --git a/tests/Repository/ProductRepositoryTest.php b/tests/Repository/ProductRepositoryTest.php
+index e6b3716..a39cd93 100644
+--- a/tests/Repository/ProductRepositoryTest.php
++++ b/tests/Repository/ProductRepositoryTest.php
+@@ -5,9 +5,12 @@ namespace App\Tests\Repository;
+ use App\Factory\ProductFactory;
+ use App\Repository\ProductRepository;
+ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
++use Zenstruck\Foundry\Test\ResetDatabase;
+ 
+ class ProductRepositoryTest extends KernelTestCase
+ {
++    use ResetDatabase;
++
+     public function testSomething(): void
+     {
+         $kernel = self::bootKernel();

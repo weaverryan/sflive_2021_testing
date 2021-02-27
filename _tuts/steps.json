@@ -1,0 +1,70 @@
+{
+    "steps": [
+        {
+            "id": "start",
+            "name": "start",
+            "description": null
+        },
+        {
+            "id": "phpunit-installing-test-pack",
+            "name": "PHPUnit: installing test-pack",
+            "description": null
+        },
+        {
+            "id": "phpunit-install-phpunit-itself",
+            "name": "PHPUnit: install phpunit itself",
+            "description": null
+        },
+        {
+            "id": "unit-add-unit-test",
+            "name": "Unit: Add unit test",
+            "description": null
+        },
+        {
+            "id": "integration-make-test-the-integration-test",
+            "name": "Integration: make:test the integration test",
+            "description": null
+        },
+        {
+            "id": "integration-fetch-repository-service",
+            "name": "Integration: fetch repository service",
+            "description": null
+        },
+        {
+            "id": "foundry-install-foundry",
+            "name": "Foundry: install foundry",
+            "description": null
+        },
+        {
+            "id": "foundry-make-factory-product",
+            "name": "Foundry: make:factory Product",
+            "description": null
+        },
+        {
+            "id": "foundry-make-factory-category",
+            "name": "Foundry: make:factory Category",
+            "description": null
+        },
+        {
+            "id": "foundry-customizing-factories",
+            "name": "Foundry: customizing factories",
+            "description": null
+        },
+        {
+            "id": "integration-finish-test",
+            "name": "Integration: finish test",
+            "description": null
+        },
+        {
+            "id": "integration-configure-db",
+            "name": "Integration: configure db",
+            "description": null
+        },
+        {
+            "id": "integration-use-resetdatabase",
+            "name": "Integration: use ResetDatabase",
+            "description": null
+        }
+    ],
+    "sha": "3bb7c1d95bccbbd9cfde2fed01eb3dc3487c2506"
+}

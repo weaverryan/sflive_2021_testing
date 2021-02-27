@@ -1,0 +1,25 @@
+diff --git a/tests/Repository/ProductRepositoryTest.php b/tests/Repository/ProductRepositoryTest.php
+index 37c71aa..e6b3716 100644
+--- a/tests/Repository/ProductRepositoryTest.php
++++ b/tests/Repository/ProductRepositoryTest.php
+@@ -2,6 +2,7 @@
+ 
+ namespace App\Tests\Repository;
+ 
++use App\Factory\ProductFactory;
+ use App\Repository\ProductRepository;
+ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+ 
+@@ -13,5 +14,12 @@ class ProductRepositoryTest extends KernelTestCase
+ 
+         $productRepository = self::$container->get(ProductRepository::class);
+         $this->assertInstanceOf(ProductRepository::class, $productRepository);
++
++        ProductFactory::new()->create(['name' => 'floppy disk']);
++        ProductFactory::new()->create(['name' => 'popcorn']);
++        ProductFactory::new()->create(['description' => 'A CD (compact disk)']);
++
++        $results = $productRepository->search('disk');
++        $this->assertCount(2, $results);
+     }
+ }
