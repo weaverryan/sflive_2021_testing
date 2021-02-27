@@ -23,7 +23,6 @@ class ProductControllerTest extends PantherTestCase
             ->fillField('Name', 'Slightly old popcorn')
             ->click('Update')
             ->followRedirect()
-            ->dd()
             ->assertSuccessful();
 
         $this->assertSame('Slightly old popcorn', $product->getName());
