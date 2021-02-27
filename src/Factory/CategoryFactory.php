@@ -31,7 +31,7 @@ final class CategoryFactory extends ModelFactory
     protected function getDefaults(): array
     {
         return [
-            // TODO add your default values here (https://github.com/zenstruck/foundry#model-factories)
+            'name' => self::faker()->word,
         ];
     }
 

@@ -31,7 +31,13 @@ final class ProductFactory extends ModelFactory
     protected function getDefaults(): array
     {
         return [
-            // TODO add your default values here (https://github.com/zenstruck/foundry#model-factories)
+            'name' => self::faker()->words(3, true),
+            'description' => self::faker()->paragraph,
+            'brand' => self::faker()->company,
+            'price' => self::faker()->numberBetween(1000, 10000),
+            'imageFilename' => 'floppy-disc.png',
+            // will create a random category
+            'category' => CategoryFactory::new(),
         ];
     }
 
