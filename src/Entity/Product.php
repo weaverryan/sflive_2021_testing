@@ -51,7 +51,7 @@ class Product
     /**
      * @ORM\Column(type="integer")
      */
-    private $stockQuantity;
+    private $stockQuantity = 0;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="products")
