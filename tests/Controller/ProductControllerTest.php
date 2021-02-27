@@ -32,7 +32,9 @@ class ProductControllerTest extends PantherTestCase
     {
         ProductFactory::createOne(['name' => 'Floppy Disk']);
         ProductFactory::createOne(['name' => 'Compact Disk']);
-        $this->pantherBrowser()
+        $this->pantherBrowser([], [], [
+            'port' => (int) (9515 + getenv('TEST_TOKEN')),
+        ])
             ->visit('/')
             ->fillField('q', 'dis')
             ->waitUntilSeeIn('.search-preview', 'Floppy Disk')
