@@ -1,0 +1,21 @@
+diff --git a/tests/Util/CalculatorTest.php b/tests/Util/CalculatorTest.php
+index f043438..0f3e33b 100644
+--- a/tests/Util/CalculatorTest.php
++++ b/tests/Util/CalculatorTest.php
+@@ -2,12 +2,14 @@
+ 
+ namespace App\Tests\Util;
+ 
++use App\Util\Calculator;
+ use PHPUnit\Framework\TestCase;
+ 
+ class CalculatorTest extends TestCase
+ {
+-    public function testSomething(): void
++    public function testAdd(): void
+     {
+-        $this->assertTrue(true);
++        $calculator = new Calculator();
++        $this->assertSame(42, $calculator->add(20, 22));
+     }
+ }

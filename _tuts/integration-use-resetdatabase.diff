@@ -1,5 +1,5 @@
 diff --git a/tests/Repository/ProductRepositoryTest.php b/tests/Repository/ProductRepositoryTest.php
-index e6b3716..a39cd93 100644
+index 31b10a2..575784d 100644
 --- a/tests/Repository/ProductRepositoryTest.php
 +++ b/tests/Repository/ProductRepositoryTest.php
 @@ -5,9 +5,12 @@ namespace App\Tests\Repository;
@@ -12,6 +12,6 @@ index e6b3716..a39cd93 100644
  {
 +    use ResetDatabase;
 +
-     public function testSomething(): void
+     public function testSearch(): void
      {
          $kernel = self::bootKernel();

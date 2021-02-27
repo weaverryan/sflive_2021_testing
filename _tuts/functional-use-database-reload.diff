@@ -1,0 +1,17 @@
+diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
+index 6ad4b0b..1ca73d2 100644
+--- a/tests/Controller/ProductControllerTest.php
++++ b/tests/Controller/ProductControllerTest.php
+@@ -3,9 +3,12 @@
+ namespace App\Tests\Controller;
+ 
+ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
++use Zenstruck\Foundry\Test\ResetDatabase;
+ 
+ class ProductControllerTest extends WebTestCase
+ {
++    use ResetDatabase;
++
+     public function testSomething(): void
+     {
+         $client = static::createClient();

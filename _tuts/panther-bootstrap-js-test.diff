@@ -1,0 +1,25 @@
+diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
+index 31abb15..967d3ae 100644
+--- a/tests/Controller/ProductControllerTest.php
++++ b/tests/Controller/ProductControllerTest.php
+@@ -26,4 +26,20 @@ class ProductControllerTest extends WebTestCase
+         $this->assertResponseIsSuccessful();
+         $this->assertSame('Slightly old popcorn', $product->getName());
+     }
++
++    public function testSearchAutoSuggestion(): void
++    {
++        $client = static::createClient();
++        ProductFactory::new()->create(['name' => 'Floppy Disk']);
++        ProductFactory::new()->create(['name' => 'Compact Disk']);
++        $crawler = $client->request('GET', sprintf('/'));
++
++        $searchForm = $crawler->selectButton('Search')->form();
++        $searchForm->setValues(['q' => 'dis']);
++
++        $this->assertCount(
++            2,
++            $crawler->filter('.search-preview .list-group-item')
++        );
++    }
+ }

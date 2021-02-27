@@ -1,0 +1,13 @@
+diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
+index be6ba3e..31abb15 100644
+--- a/tests/Controller/ProductControllerTest.php
++++ b/tests/Controller/ProductControllerTest.php
+@@ -15,7 +15,7 @@ class ProductControllerTest extends WebTestCase
+         $client = static::createClient();
+         $product = ProductFactory::new()->create([
+             'name' => 'Brand new popcorn'
+-        ]);
++        ])->enableAutoRefresh();
+         $crawler = $client->request('GET', sprintf('/product/%s/edit', $product->getId()));
+ 
+         $client->submitForm('Update', [

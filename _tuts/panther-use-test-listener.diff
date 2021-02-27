@@ -1,0 +1,31 @@
+diff --git a/phpunit.xml.dist b/phpunit.xml.dist
+index 0bd20c8..8d9d7f6 100644
+--- a/phpunit.xml.dist
++++ b/phpunit.xml.dist
+@@ -32,9 +32,7 @@
+     </listeners>
+ 
+     <!-- Run `composer require symfony/panther` before enabling this extension -->
+-    <!--
+     <extensions>
+         <extension class="Symfony\Component\Panther\ServerExtension" />
+     </extensions>
+-    -->
+ </phpunit>
+diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
+index 057ae40..342a9c0 100644
+--- a/tests/Controller/ProductControllerTest.php
++++ b/tests/Controller/ProductControllerTest.php
+@@ -37,12 +37,9 @@ class ProductControllerTest extends PantherTestCase
+         $searchForm = $crawler->selectButton('Search')->form();
+         $searchForm->setValues(['q' => 'dis']);
+ 
+-        $client->takeScreenshot(__DIR__.'/../../screenshot.png');
+-
+         $this->assertCount(
+             2,
+             $crawler->filter('.search-preview .list-group-item')
+         );
+-
+     }
+ }
