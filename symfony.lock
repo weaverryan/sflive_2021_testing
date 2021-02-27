@@ -2,6 +2,9 @@
     "composer/package-versions-deprecated": {
         "version": "1.11.99.1"
     },
+    "dbrekelmans/bdi": {
+        "version": "0.3"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
