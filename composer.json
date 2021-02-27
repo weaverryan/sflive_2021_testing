@@ -86,6 +86,7 @@
         "symfony/debug-bundle": "^5.2",
         "symfony/maker-bundle": "^1.27",
         "symfony/monolog-bundle": "^3.0",
+        "symfony/panther": "^1.0",
         "symfony/phpunit-bridge": "^5.2",
         "symfony/stopwatch": "^5.2",
         "symfony/var-dumper": "^5.2",

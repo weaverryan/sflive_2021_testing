@@ -123,6 +123,9 @@
     "phar-io/version": {
         "version": "3.1.0"
     },
+    "php-webdriver/webdriver": {
+        "version": "1.10.0"
+    },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
     },
@@ -346,6 +349,9 @@
             "src/Kernel.php"
         ]
     },
+    "symfony/http-client": {
+        "version": "v5.2.3"
+    },
     "symfony/http-client-contracts": {
         "version": "v2.3.1"
     },
@@ -391,6 +397,15 @@
     "symfony/orm-pack": {
         "version": "v2.1.0"
     },
+    "symfony/panther": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "93d9baa582d0a755cc9ef81bc38a921d5fa16973"
+        }
+    },
     "symfony/phpunit-bridge": {
         "version": "5.1",
         "recipe": {
@@ -423,6 +438,9 @@
     },
     "symfony/polyfill-php80": {
         "version": "v1.22.0"
+    },
+    "symfony/process": {
+        "version": "v5.2.3"
     },
     "symfony/profiler-pack": {
         "version": "v1.0.5"
