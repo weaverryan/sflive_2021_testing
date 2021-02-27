@@ -2,6 +2,9 @@
     "behat/mink": {
         "version": "v1.8.1"
     },
+    "brianium/paratest": {
+        "version": "v6.2.0"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99.1"
     },
