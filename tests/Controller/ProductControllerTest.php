@@ -30,14 +30,12 @@ class ProductControllerTest extends PantherTestCase
 
     public function testSearchAutoSuggestion(): void
     {
-        $client = static::createPantherClient();
         ProductFactory::createOne(['name' => 'Floppy Disk']);
         ProductFactory::createOne(['name' => 'Compact Disk']);
-        $crawler = $client->request('GET', '/');
-
-        $searchForm = $crawler->selectButton('Search')->form();
-        $searchForm->setValues(['q' => 'dis']);
-
-        $this->assertSelectorWillContain('.search-preview', 'Floppy Disk');
+        $this->pantherBrowser()
+            ->visit('/')
+            ->fillField('q', 'dis')
+            ->waitUntilSeeIn('.search-preview', 'Floppy Disk')
+            ->assertElementCount('.search-preview .list-group-item', 2);
     }
 }
