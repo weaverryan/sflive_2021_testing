@@ -14,7 +14,8 @@ class ProductControllerTest extends WebTestCase
     public function testEditProduct(): void
     {
         $client = static::createClient();
-        $product = ProductFactory::createOne(['name' => 'Brand new popcorn']);
+        $product = ProductFactory::createOne(['name' => 'Brand new popcorn'])
+            ->enableAutoRefresh();
         $crawler = $client->request('GET', sprintf('/product/%s/edit', $product->getId()));
 
         $client->submitForm('Update', [
