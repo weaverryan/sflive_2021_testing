@@ -1,8 +1,8 @@
 diff --git a/composer.json b/composer.json
-index a94f31b..68a5ff7 100644
+index 0b69041..efac9ad 100644
 --- a/composer.json
 +++ b/composer.json
-@@ -82,6 +82,7 @@
+@@ -79,6 +79,7 @@
          }
      },
      "require-dev": {
@@ -11,19 +11,19 @@ index a94f31b..68a5ff7 100644
          "phpunit/phpunit": "^8.5",
          "symfony/browser-kit": "^5.2",
 diff --git a/composer.lock b/composer.lock
-index aec4b69..d29eb48 100644
+index b66f386..151aa9c 100644
 --- a/composer.lock
 +++ b/composer.lock
 @@ -4,7 +4,7 @@
          "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
          "This file is @generated automatically"
      ],
--    "content-hash": "f87d3bb794ea11864255197f0c20fc9d",
-+    "content-hash": "a51d4ab0355c7f2739b7514d9ed0f8fb",
+-    "content-hash": "02fe148a02347c5cb6138f13350aed6c",
++    "content-hash": "d9b4be7a4e536db27d93515990efe336",
      "packages": [
          {
              "name": "composer/package-versions-deprecated",
-@@ -6757,6 +6757,55 @@
+@@ -6765,6 +6765,55 @@
          }
      ],
      "packages-dev": [

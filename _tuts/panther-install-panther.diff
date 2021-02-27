@@ -1,8 +1,8 @@
 diff --git a/composer.json b/composer.json
-index 0efd312..a94f31b 100644
+index 9392213..0b69041 100644
 --- a/composer.json
 +++ b/composer.json
-@@ -89,6 +89,7 @@
+@@ -86,6 +86,7 @@
          "symfony/debug-bundle": "^5.2",
          "symfony/maker-bundle": "^1.27",
          "symfony/monolog-bundle": "^3.0",
@@ -11,19 +11,19 @@ index 0efd312..a94f31b 100644
          "symfony/stopwatch": "^5.2",
          "symfony/var-dumper": "^5.2",
 diff --git a/composer.lock b/composer.lock
-index 667164b..aec4b69 100644
+index e1dd6e0..b66f386 100644
 --- a/composer.lock
 +++ b/composer.lock
 @@ -4,7 +4,7 @@
          "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
          "This file is @generated automatically"
      ],
--    "content-hash": "f3e6408024d9aa296db7643b3560191d",
-+    "content-hash": "f87d3bb794ea11864255197f0c20fc9d",
+-    "content-hash": "40f2f1d13fcb68d5e7bee2cc2dfff85e",
++    "content-hash": "02fe148a02347c5cb6138f13350aed6c",
      "packages": [
          {
              "name": "composer/package-versions-deprecated",
-@@ -7236,6 +7236,77 @@
+@@ -7244,6 +7244,77 @@
              },
              "time": "2021-02-23T14:00:09+00:00"
          },
@@ -101,7 +101,7 @@ index 667164b..aec4b69 100644
          {
              "name": "phpspec/prophecy",
              "version": "1.12.2",
-@@ -8714,6 +8785,92 @@
+@@ -8722,6 +8793,92 @@
              ],
              "time": "2021-01-27T10:01:46+00:00"
          },
@@ -194,7 +194,7 @@ index 667164b..aec4b69 100644
          {
              "name": "symfony/maker-bundle",
              "version": "v1.29.1",
-@@ -8965,6 +9122,85 @@
+@@ -8973,6 +9130,85 @@
              ],
              "time": "2020-10-06T15:12:11+00:00"
          },
@@ -280,7 +280,7 @@ index 667164b..aec4b69 100644
          {
              "name": "symfony/phpunit-bridge",
              "version": "v5.2.3",
-@@ -9048,6 +9284,68 @@
+@@ -9056,6 +9292,68 @@
              ],
              "time": "2021-01-25T13:54:05+00:00"
          },

@@ -44,10 +44,10 @@ index 0000000..4d1ed05
 +
 +require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php';
 diff --git a/composer.json b/composer.json
-index 6366213..aea6af0 100644
+index a8e7e41..facd1c6 100644
 --- a/composer.json
 +++ b/composer.json
-@@ -82,9 +82,12 @@
+@@ -79,9 +79,12 @@
      },
      "require-dev": {
          "doctrine/doctrine-fixtures-bundle": "^3.4",
@@ -61,19 +61,19 @@ index 6366213..aea6af0 100644
          "symfony/var-dumper": "^5.2",
          "symfony/web-profiler-bundle": "^5.2"
 diff --git a/composer.lock b/composer.lock
-index cbc185a..773b904 100644
+index e5ebacb..7878f82 100644
 --- a/composer.lock
 +++ b/composer.lock
 @@ -4,7 +4,7 @@
          "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
          "This file is @generated automatically"
      ],
--    "content-hash": "4e0ac47869afe43cafd5e3285a37a803",
-+    "content-hash": "2db4baa05f007e081b078b490edb1ee8",
+-    "content-hash": "9b492e9aaf0f4af0b597132c64f477ff",
++    "content-hash": "6d38c078a1009e89159d4171a1d4e681",
      "packages": [
          {
              "name": "composer/package-versions-deprecated",
-@@ -6892,6 +6892,142 @@
+@@ -6900,6 +6900,142 @@
              },
              "time": "2020-12-20T10:01:03+00:00"
          },
@@ -216,7 +216,7 @@ index cbc185a..773b904 100644
          {
              "name": "symfony/debug-bundle",
              "version": "v5.2.3",
-@@ -6970,6 +7106,80 @@
+@@ -6978,6 +7114,80 @@
              ],
              "time": "2021-01-10T16:30:10+00:00"
          },
@@ -297,7 +297,7 @@ index cbc185a..773b904 100644
          {
              "name": "symfony/maker-bundle",
              "version": "v1.29.1",
-@@ -7221,6 +7431,89 @@
+@@ -7229,6 +7439,89 @@
              ],
              "time": "2020-10-06T15:12:11+00:00"
          },

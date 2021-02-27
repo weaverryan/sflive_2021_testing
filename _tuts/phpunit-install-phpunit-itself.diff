@@ -12,10 +12,10 @@ index 97a35da..5f74d29 100644
 +.phpunit.result.cache
 +###< phpunit/phpunit ###
 diff --git a/composer.json b/composer.json
-index aea6af0..ec28cdf 100644
+index facd1c6..01ddbcc 100644
 --- a/composer.json
 +++ b/composer.json
-@@ -82,6 +82,7 @@
+@@ -79,6 +79,7 @@
      },
      "require-dev": {
          "doctrine/doctrine-fixtures-bundle": "^3.4",
@@ -24,19 +24,19 @@ index aea6af0..ec28cdf 100644
          "symfony/css-selector": "^5.2",
          "symfony/debug-bundle": "^5.2",
 diff --git a/composer.lock b/composer.lock
-index 773b904..177d464 100644
+index 7878f82..7e0f6d2 100644
 --- a/composer.lock
 +++ b/composer.lock
 @@ -4,7 +4,7 @@
          "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
          "This file is @generated automatically"
      ],
--    "content-hash": "2db4baa05f007e081b078b490edb1ee8",
-+    "content-hash": "a27d7fe1f505fb142f7bb2decd38e174",
+-    "content-hash": "6d38c078a1009e89159d4171a1d4e681",
++    "content-hash": "dfb576e3b860142168f1625f8966c95a",
      "packages": [
          {
              "name": "composer/package-versions-deprecated",
-@@ -6836,61 +6836,1420 @@
+@@ -6844,61 +6844,1420 @@
              ],
              "time": "2020-12-14T13:15:25+00:00"
          },
@@ -573,29 +573,29 @@ index 773b904..177d464 100644
 +        },
 +        {
 +            "name": "phpunit/php-token-stream",
-+            "version": "3.1.2",
++            "version": "4.0.4",
 +            "source": {
 +                "type": "git",
 +                "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-+                "reference": "472b687829041c24b25f475e14c2f38a09edf1c2"
++                "reference": "a853a0e183b9db7eed023d7933a858fa1c8d25a3"
 +            },
 +            "dist": {
 +                "type": "zip",
-+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/472b687829041c24b25f475e14c2f38a09edf1c2",
-+                "reference": "472b687829041c24b25f475e14c2f38a09edf1c2",
++                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/a853a0e183b9db7eed023d7933a858fa1c8d25a3",
++                "reference": "a853a0e183b9db7eed023d7933a858fa1c8d25a3",
 +                "shasum": ""
 +            },
 +            "require": {
 +                "ext-tokenizer": "*",
-+                "php": ">=7.1"
++                "php": "^7.3 || ^8.0"
 +            },
 +            "require-dev": {
-+                "phpunit/phpunit": "^7.0"
++                "phpunit/phpunit": "^9.0"
 +            },
 +            "type": "library",
 +            "extra": {
 +                "branch-alias": {
-+                    "dev-master": "3.1-dev"
++                    "dev-master": "4.0-dev"
 +                }
 +            },
 +            "autoload": {
@@ -620,7 +620,7 @@ index 773b904..177d464 100644
 +            ],
 +            "support": {
 +                "issues": "https://github.com/sebastianbergmann/php-token-stream/issues",
-+                "source": "https://github.com/sebastianbergmann/php-token-stream/tree/3.1.2"
++                "source": "https://github.com/sebastianbergmann/php-token-stream/tree/master"
 +            },
 +            "funding": [
 +                {
@@ -629,7 +629,7 @@ index 773b904..177d464 100644
 +                }
 +            ],
 +            "abandoned": true,
-+            "time": "2020-11-30T08:38:46+00:00"
++            "time": "2020-08-04T08:28:15+00:00"
 +        },
 +        {
 +            "name": "phpunit/phpunit",
@@ -1477,7 +1477,7 @@ index 773b904..177d464 100644
          },
          {
              "name": "symfony/browser-kit",
-@@ -7591,6 +8950,56 @@
+@@ -7599,6 +8958,56 @@
                  }
              ],
              "time": "2021-01-28T22:06:19+00:00"
