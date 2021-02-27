@@ -2,16 +2,16 @@
 
 namespace App\Tests\Repository;
 
+use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class ProductRepositoryTest extends KernelTestCase
 {
-    public function testSomething(): void
+    public function testSearch(): void
     {
         $kernel = self::bootKernel();
 
-        $this->assertSame('test', $kernel->getEnvironment());
-        //$routerService = self::$container->get('router');
-        //$myCustomService = self::$container->get(CustomService::class);
+        $productRepository = self::$container->get(ProductRepository::class);
+        $this->assertInstanceOf(ProductRepository::class, $productRepository);
     }
 }
