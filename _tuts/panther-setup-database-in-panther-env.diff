@@ -1,7 +1,0 @@
-diff --git a/.env.panther b/.env.panther
-new file mode 100644
-index 0000000..9dd6ff2
---- /dev/null
-+++ b/.env.panther
-@@ -0,0 +1 @@
-+DATABASE_URL="mysql://root@127.0.0.1:3306/testing?serverVersion=5.7"
