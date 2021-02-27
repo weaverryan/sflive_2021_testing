@@ -1,5 +1,5 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index 1ca73d2..be6ba3e 100644
+index 235012a..c69474f 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
 @@ -2,6 +2,7 @@
@@ -8,11 +8,11 @@ index 1ca73d2..be6ba3e 100644
  
 +use App\Factory\ProductFactory;
  use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+ use Zenstruck\Foundry\Test\Factories;
  use Zenstruck\Foundry\Test\ResetDatabase;
- 
-@@ -9,12 +10,20 @@ class ProductControllerTest extends WebTestCase
+@@ -10,12 +11,20 @@ class ProductControllerTest extends WebTestCase
  {
-     use ResetDatabase;
+     use Factories, ResetDatabase;
  
 -    public function testSomething(): void
 +    public function testEditProduct(): void

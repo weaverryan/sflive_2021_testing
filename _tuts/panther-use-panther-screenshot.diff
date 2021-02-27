@@ -1,21 +1,22 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index 967d3ae..057ae40 100644
+index 3213eb1..7b2a9c6 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
-@@ -3,10 +3,10 @@
+@@ -3,11 +3,11 @@
  namespace App\Tests\Controller;
  
  use App\Factory\ProductFactory;
 -use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 +use Symfony\Component\Panther\PantherTestCase;
+ use Zenstruck\Foundry\Test\Factories;
  use Zenstruck\Foundry\Test\ResetDatabase;
  
 -class ProductControllerTest extends WebTestCase
 +class ProductControllerTest extends PantherTestCase
  {
-     use ResetDatabase;
+     use Factories, ResetDatabase;
  
-@@ -29,7 +29,7 @@ class ProductControllerTest extends WebTestCase
+@@ -30,7 +30,7 @@ class ProductControllerTest extends WebTestCase
  
      public function testSearchAutoSuggestion(): void
      {
@@ -24,7 +25,7 @@ index 967d3ae..057ae40 100644
          ProductFactory::new()->create(['name' => 'Floppy Disk']);
          ProductFactory::new()->create(['name' => 'Compact Disk']);
          $crawler = $client->request('GET', sprintf('/'));
-@@ -37,9 +37,12 @@ class ProductControllerTest extends WebTestCase
+@@ -38,9 +38,12 @@ class ProductControllerTest extends WebTestCase
          $searchForm = $crawler->selectButton('Search')->form();
          $searchForm->setValues(['q' => 'dis']);
  

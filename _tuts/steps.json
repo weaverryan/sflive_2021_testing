@@ -174,7 +174,12 @@
             "id": "paratest-use-test-token",
             "name": "ParaTest: use TEST_TOKEN",
             "description": null
+        },
+        {
+            "id": "paratest-port-hacks",
+            "name": "ParaTest: port hacks",
+            "description": null
         }
     ],
-    "sha": "100c162897da16a7836d5b774923e146bcaca8f9"
+    "sha": "5e82e42a39c31ba87d016e2bc5b6e39019821d88"
 }

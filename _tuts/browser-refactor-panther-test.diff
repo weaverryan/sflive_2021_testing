@@ -1,5 +1,5 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index ae95d70..ac30841 100644
+index 0b926dd..39fbb73 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
 @@ -31,14 +31,12 @@ class ProductControllerTest extends PantherTestCase

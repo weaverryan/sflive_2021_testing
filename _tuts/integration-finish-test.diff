@@ -1,16 +1,23 @@
 diff --git a/tests/Repository/ProductRepositoryTest.php b/tests/Repository/ProductRepositoryTest.php
-index db1edb7..31b10a2 100644
+index db1edb7..9ec428d 100644
 --- a/tests/Repository/ProductRepositoryTest.php
 +++ b/tests/Repository/ProductRepositoryTest.php
-@@ -2,6 +2,7 @@
+@@ -2,16 +2,27 @@
  
  namespace App\Tests\Repository;
  
 +use App\Factory\ProductFactory;
  use App\Repository\ProductRepository;
  use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
++use Zenstruck\Foundry\Test\Factories;
  
-@@ -13,5 +14,12 @@ class ProductRepositoryTest extends KernelTestCase
+ class ProductRepositoryTest extends KernelTestCase
+ {
++    use Factories;
++
+     public function testSearch(): void
+     {
+         $kernel = self::bootKernel();
  
          $productRepository = self::$container->get(ProductRepository::class);
          $this->assertInstanceOf(ProductRepository::class, $productRepository);

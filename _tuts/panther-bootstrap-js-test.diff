@@ -1,8 +1,8 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index 31abb15..967d3ae 100644
+index 93ac4c4..3213eb1 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
-@@ -26,4 +26,20 @@ class ProductControllerTest extends WebTestCase
+@@ -27,4 +27,20 @@ class ProductControllerTest extends WebTestCase
          $this->assertResponseIsSuccessful();
          $this->assertSame('Slightly old popcorn', $product->getName());
      }

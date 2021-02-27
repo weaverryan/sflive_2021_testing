@@ -1,18 +1,19 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index fc760eb..ae95d70 100644
+index 6a08dac..0b926dd 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
-@@ -4,26 +4,28 @@ namespace App\Tests\Controller;
+@@ -4,27 +4,28 @@ namespace App\Tests\Controller;
  
  use App\Factory\ProductFactory;
  use Symfony\Component\Panther\PantherTestCase;
 +use Zenstruck\Browser\Test\HasBrowser;
+ use Zenstruck\Foundry\Test\Factories;
  use Zenstruck\Foundry\Test\ResetDatabase;
  
  class ProductControllerTest extends PantherTestCase
  {
-     use ResetDatabase;
-+    use HasBrowser;
+-    use Factories, ResetDatabase;
++    use Factories, ResetDatabase, HasBrowser;
  
      public function testEditProduct(): void
      {

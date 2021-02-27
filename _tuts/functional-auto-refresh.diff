@@ -1,8 +1,8 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index be6ba3e..31abb15 100644
+index c69474f..93ac4c4 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
-@@ -15,7 +15,7 @@ class ProductControllerTest extends WebTestCase
+@@ -16,7 +16,7 @@ class ProductControllerTest extends WebTestCase
          $client = static::createClient();
          $product = ProductFactory::new()->create([
              'name' => 'Brand new popcorn'

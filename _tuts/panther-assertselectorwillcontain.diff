@@ -1,8 +1,8 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index 71f352e..fc760eb 100644
+index 663f89d..6a08dac 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
-@@ -37,12 +37,6 @@ class ProductControllerTest extends PantherTestCase
+@@ -38,12 +38,6 @@ class ProductControllerTest extends PantherTestCase
          $searchForm = $crawler->selectButton('Search')->form();
          $searchForm->setValues(['q' => 'dis']);
  
