@@ -26,4 +26,20 @@ class ProductControllerTest extends WebTestCase
         $this->assertResponseIsSuccessful();
         $this->assertSame('Slightly old popcorn', $product->getName());
     }
+
+    public function testSearchAutoSuggestion(): void
+    {
+        $client = static::createClient();
+        ProductFactory::createOne(['name' => 'Floppy Disk']);
+        ProductFactory::createOne(['name' => 'Compact Disk']);
+        $crawler = $client->request('GET', '/');
+
+        $searchForm = $crawler->selectButton('Search')->form();
+        $searchForm->setValues(['q' => 'dis']);
+
+        $this->assertCount(
+            2,
+            $crawler->filter('.search-preview .list-group-item')
+        );
+    }
 }
