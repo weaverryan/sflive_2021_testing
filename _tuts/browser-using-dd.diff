@@ -1,0 +1,12 @@
+diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
+index ae95d70..aadde13 100644
+--- a/tests/Controller/ProductControllerTest.php
++++ b/tests/Controller/ProductControllerTest.php
+@@ -24,6 +24,7 @@ class ProductControllerTest extends PantherTestCase
+             ->fillField('Name', 'Slightly old popcorn')
+             ->click('Update')
+             ->followRedirect()
++            ->dd()
+             ->assertSuccessful();
+ 
+         $this->assertSame('Slightly old popcorn', $product->getName());

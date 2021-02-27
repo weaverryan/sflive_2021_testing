@@ -1,0 +1,40 @@
+diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
+index fc760eb..ae95d70 100644
+--- a/tests/Controller/ProductControllerTest.php
++++ b/tests/Controller/ProductControllerTest.php
+@@ -4,26 +4,28 @@ namespace App\Tests\Controller;
+ 
+ use App\Factory\ProductFactory;
+ use Symfony\Component\Panther\PantherTestCase;
++use Zenstruck\Browser\Test\HasBrowser;
+ use Zenstruck\Foundry\Test\ResetDatabase;
+ 
+ class ProductControllerTest extends PantherTestCase
+ {
+     use ResetDatabase;
++    use HasBrowser;
+ 
+     public function testEditProduct(): void
+     {
+-        $client = static::createClient();
+         $product = ProductFactory::new()->create([
+             'name' => 'Brand new popcorn'
+         ])->enableAutoRefresh();
+-        $crawler = $client->request('GET', sprintf('/product/%s/edit', $product->getId()));
+ 
+-        $client->submitForm('Update', [
+-            'product[name]' => 'Slightly old popcorn'
+-        ]);
+-        $client->followRedirect();
++        $this->browser()
++            ->visit(sprintf('/product/%s/edit', $product->getId()))
++            ->assertSuccessful()
++            ->fillField('Name', 'Slightly old popcorn')
++            ->click('Update')
++            ->followRedirect()
++            ->assertSuccessful();
+ 
+-        $this->assertResponseIsSuccessful();
+         $this->assertSame('Slightly old popcorn', $product->getName());
+     }
+ 

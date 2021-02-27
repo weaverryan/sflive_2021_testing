@@ -1,0 +1,24 @@
+diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
+index ae95d70..ac30841 100644
+--- a/tests/Controller/ProductControllerTest.php
++++ b/tests/Controller/ProductControllerTest.php
+@@ -31,14 +31,12 @@ class ProductControllerTest extends PantherTestCase
+ 
+     public function testSearchAutoSuggestion(): void
+     {
+-        $client = static::createPantherClient();
+         ProductFactory::new()->create(['name' => 'Floppy Disk']);
+         ProductFactory::new()->create(['name' => 'Compact Disk']);
+-        $crawler = $client->request('GET', sprintf('/'));
+-
+-        $searchForm = $crawler->selectButton('Search')->form();
+-        $searchForm->setValues(['q' => 'dis']);
+-
+-        $this->assertSelectorWillContain('.search-preview', 'Floppy Disk');
++        $this->pantherBrowser()
++            ->visit('/')
++            ->fillField('q', 'dis')
++            ->waitUntilSeeIn('.search-preview', 'Floppy Disk')
++            ->assertElementCount('.search-preview .list-group-item', 2);
+     }
+ }

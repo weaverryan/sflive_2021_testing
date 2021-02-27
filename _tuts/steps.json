@@ -134,7 +134,37 @@
             "id": "panther-assertselectorwillcontain",
             "name": "Panther: assertSelectorWillContain",
             "description": null
+        },
+        {
+            "id": "browser-install-browser",
+            "name": "Browser: install browser",
+            "description": null
+        },
+        {
+            "id": "browser-change-phpunit-listener",
+            "name": "Browser: change phpunit listener",
+            "description": null
+        },
+        {
+            "id": "browser-refactor-non-js-test",
+            "name": "Browser: refactor non-js test",
+            "description": null
+        },
+        {
+            "id": "browser-using-dd",
+            "name": "Browser: using dd()",
+            "description": null
+        },
+        {
+            "id": "browser-remove-dd",
+            "name": "Browser: remove dd()",
+            "description": null
+        },
+        {
+            "id": "browser-refactor-panther-test",
+            "name": "Browser: refactor panther test",
+            "description": null
         }
     ],
-    "sha": "acf84541057bb10df7528238c097c221cf24c036"
+    "sha": "4542186543b95c2e621446518c28023eac69a126"
 }
