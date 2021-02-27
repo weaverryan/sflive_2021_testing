@@ -25,7 +25,7 @@ class ProductRepository extends ServiceEntityRepository
      *
      * @return Product[]
      */
-    public function search(?Category $category, ?string $term)
+    public function search(?string $term, ?Category $category = null)
     {
         $qb = $this->createQueryBuilder('product');
 

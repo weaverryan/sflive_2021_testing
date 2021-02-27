@@ -22,8 +22,8 @@ class ProductController extends AbstractController
     {
         $searchTerm = $request->query->get('q');
         $products = $productRepository->search(
-            $category,
-            $searchTerm
+            $searchTerm,
+            $category
         );
 
         if ($request->query->get('preview')) {
