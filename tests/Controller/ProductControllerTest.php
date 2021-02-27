@@ -37,12 +37,9 @@ class ProductControllerTest extends PantherTestCase
         $searchForm = $crawler->selectButton('Search')->form();
         $searchForm->setValues(['q' => 'dis']);
 
-        $client->takeScreenshot(__DIR__.'/../../screenshot.png');
-
         $this->assertCount(
             2,
             $crawler->filter('.search-preview .list-group-item')
         );
-
     }
 }
