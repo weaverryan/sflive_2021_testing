@@ -1,5 +1,5 @@
 diff --git a/composer.json b/composer.json
-index 9392213..0b69041 100644
+index a650659..fd41300 100644
 --- a/composer.json
 +++ b/composer.json
 @@ -86,6 +86,7 @@
@@ -11,15 +11,15 @@ index 9392213..0b69041 100644
          "symfony/stopwatch": "^5.2",
          "symfony/var-dumper": "^5.2",
 diff --git a/composer.lock b/composer.lock
-index e1dd6e0..b66f386 100644
+index 5c4de8b..efe4708 100644
 --- a/composer.lock
 +++ b/composer.lock
 @@ -4,7 +4,7 @@
          "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
          "This file is @generated automatically"
      ],
--    "content-hash": "40f2f1d13fcb68d5e7bee2cc2dfff85e",
-+    "content-hash": "02fe148a02347c5cb6138f13350aed6c",
+-    "content-hash": "6acc2c3e71e7b0577f1de6bcbaec3dce",
++    "content-hash": "ae50a832d0a63f2a197d081ddca10c0b",
      "packages": [
          {
              "name": "composer/package-versions-deprecated",
@@ -101,7 +101,7 @@ index e1dd6e0..b66f386 100644
          {
              "name": "phpspec/prophecy",
              "version": "1.12.2",
-@@ -8722,6 +8793,92 @@
+@@ -8984,6 +9055,92 @@
              ],
              "time": "2021-01-27T10:01:46+00:00"
          },
@@ -194,7 +194,7 @@ index e1dd6e0..b66f386 100644
          {
              "name": "symfony/maker-bundle",
              "version": "v1.29.1",
-@@ -8973,6 +9130,85 @@
+@@ -9235,6 +9392,85 @@
              ],
              "time": "2020-10-06T15:12:11+00:00"
          },
@@ -280,7 +280,7 @@ index e1dd6e0..b66f386 100644
          {
              "name": "symfony/phpunit-bridge",
              "version": "v5.2.3",
-@@ -9056,6 +9292,68 @@
+@@ -9318,6 +9554,68 @@
              ],
              "time": "2021-01-25T13:54:05+00:00"
          },
@@ -350,7 +350,7 @@ index e1dd6e0..b66f386 100644
              "name": "symfony/web-profiler-bundle",
              "version": "v5.2.3",
 diff --git a/symfony.lock b/symfony.lock
-index cda27a9..ad38154 100644
+index f50d52f..f4f0e84 100644
 --- a/symfony.lock
 +++ b/symfony.lock
 @@ -123,6 +123,9 @@
@@ -363,7 +363,7 @@ index cda27a9..ad38154 100644
      "phpdocumentor/reflection-common": {
          "version": "2.2.0"
      },
-@@ -334,6 +337,9 @@
+@@ -346,6 +349,9 @@
              "src/Kernel.php"
          ]
      },
@@ -373,7 +373,7 @@ index cda27a9..ad38154 100644
      "symfony/http-client-contracts": {
          "version": "v2.3.1"
      },
-@@ -379,6 +385,15 @@
+@@ -391,6 +397,15 @@
      "symfony/orm-pack": {
          "version": "v2.1.0"
      },
@@ -389,7 +389,7 @@ index cda27a9..ad38154 100644
      "symfony/phpunit-bridge": {
          "version": "5.1",
          "recipe": {
-@@ -412,6 +427,9 @@
+@@ -424,6 +439,9 @@
      "symfony/polyfill-php80": {
          "version": "v1.22.0"
      },

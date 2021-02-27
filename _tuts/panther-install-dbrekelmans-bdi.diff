@@ -1,5 +1,5 @@
 diff --git a/composer.json b/composer.json
-index 0b69041..efac9ad 100644
+index fd41300..6a3d2d5 100644
 --- a/composer.json
 +++ b/composer.json
 @@ -79,6 +79,7 @@
@@ -8,18 +8,18 @@ index 0b69041..efac9ad 100644
      "require-dev": {
 +        "dbrekelmans/bdi": "^0.3.0",
          "doctrine/doctrine-fixtures-bundle": "^3.4",
-         "phpunit/phpunit": "^8.5",
+         "phpunit/phpunit": "^9.5",
          "symfony/browser-kit": "^5.2",
 diff --git a/composer.lock b/composer.lock
-index b66f386..151aa9c 100644
+index efe4708..6db1a78 100644
 --- a/composer.lock
 +++ b/composer.lock
 @@ -4,7 +4,7 @@
          "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
          "This file is @generated automatically"
      ],
--    "content-hash": "02fe148a02347c5cb6138f13350aed6c",
-+    "content-hash": "d9b4be7a4e536db27d93515990efe336",
+-    "content-hash": "ae50a832d0a63f2a197d081ddca10c0b",
++    "content-hash": "b827386fe28b25ce8137e7e68aa93ccb",
      "packages": [
          {
              "name": "composer/package-versions-deprecated",
@@ -80,7 +80,7 @@ index b66f386..151aa9c 100644
              "name": "doctrine/data-fixtures",
              "version": "1.5.0",
 diff --git a/symfony.lock b/symfony.lock
-index ad38154..546b635 100644
+index f4f0e84..2ab14b3 100644
 --- a/symfony.lock
 +++ b/symfony.lock
 @@ -2,6 +2,9 @@

@@ -164,7 +164,17 @@
             "id": "browser-refactor-panther-test",
             "name": "Browser: refactor panther test",
             "description": null
+        },
+        {
+            "id": "paratest-install-it",
+            "name": "ParaTest: install it",
+            "description": null
+        },
+        {
+            "id": "paratest-use-test-token",
+            "name": "ParaTest: use TEST_TOKEN",
+            "description": null
         }
     ],
-    "sha": "4542186543b95c2e621446518c28023eac69a126"
+    "sha": "100c162897da16a7836d5b774923e146bcaca8f9"
 }
