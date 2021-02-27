@@ -1,8 +1,8 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index 6a08dac..0b926dd 100644
+index 18b1139..33f6f28 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
-@@ -4,27 +4,28 @@ namespace App\Tests\Controller;
+@@ -4,26 +4,27 @@ namespace App\Tests\Controller;
  
  use App\Factory\ProductFactory;
  use Symfony\Component\Panther\PantherTestCase;
@@ -18,9 +18,8 @@ index 6a08dac..0b926dd 100644
      public function testEditProduct(): void
      {
 -        $client = static::createClient();
-         $product = ProductFactory::new()->create([
-             'name' => 'Brand new popcorn'
-         ])->enableAutoRefresh();
+         $product = ProductFactory::createOne(['name' => 'Brand new popcorn'])
+             ->enableAutoRefresh();
 -        $crawler = $client->request('GET', sprintf('/product/%s/edit', $product->getId()));
  
 -        $client->submitForm('Update', [

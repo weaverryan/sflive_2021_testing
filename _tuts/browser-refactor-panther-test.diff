@@ -1,15 +1,15 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index 0b926dd..39fbb73 100644
+index 33f6f28..c9e9997 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
-@@ -31,14 +31,12 @@ class ProductControllerTest extends PantherTestCase
+@@ -30,14 +30,12 @@ class ProductControllerTest extends PantherTestCase
  
      public function testSearchAutoSuggestion(): void
      {
 -        $client = static::createPantherClient();
-         ProductFactory::new()->create(['name' => 'Floppy Disk']);
-         ProductFactory::new()->create(['name' => 'Compact Disk']);
--        $crawler = $client->request('GET', sprintf('/'));
+         ProductFactory::createOne(['name' => 'Floppy Disk']);
+         ProductFactory::createOne(['name' => 'Compact Disk']);
+-        $crawler = $client->request('GET', '/');
 -
 -        $searchForm = $crawler->selectButton('Search')->form();
 -        $searchForm->setValues(['q' => 'dis']);

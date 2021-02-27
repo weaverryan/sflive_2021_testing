@@ -1,8 +1,8 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index ed5f997..0b926dd 100644
+index 6e83b4e..33f6f28 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
-@@ -24,7 +24,6 @@ class ProductControllerTest extends PantherTestCase
+@@ -23,7 +23,6 @@ class ProductControllerTest extends PantherTestCase
              ->fillField('Name', 'Slightly old popcorn')
              ->click('Update')
              ->followRedirect()

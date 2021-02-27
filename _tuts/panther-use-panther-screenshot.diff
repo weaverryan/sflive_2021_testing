@@ -1,5 +1,5 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index 3213eb1..7b2a9c6 100644
+index 5df3c71..5a02af2 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
 @@ -3,11 +3,11 @@
@@ -16,16 +16,16 @@ index 3213eb1..7b2a9c6 100644
  {
      use Factories, ResetDatabase;
  
-@@ -30,7 +30,7 @@ class ProductControllerTest extends WebTestCase
+@@ -29,7 +29,7 @@ class ProductControllerTest extends WebTestCase
  
      public function testSearchAutoSuggestion(): void
      {
 -        $client = static::createClient();
 +        $client = static::createPantherClient();
-         ProductFactory::new()->create(['name' => 'Floppy Disk']);
-         ProductFactory::new()->create(['name' => 'Compact Disk']);
-         $crawler = $client->request('GET', sprintf('/'));
-@@ -38,9 +38,12 @@ class ProductControllerTest extends WebTestCase
+         ProductFactory::createOne(['name' => 'Floppy Disk']);
+         ProductFactory::createOne(['name' => 'Compact Disk']);
+         $crawler = $client->request('GET', '/');
+@@ -37,9 +37,12 @@ class ProductControllerTest extends WebTestCase
          $searchForm = $crawler->selectButton('Search')->form();
          $searchForm->setValues(['q' => 'dis']);
  

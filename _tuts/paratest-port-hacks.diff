@@ -8,13 +8,13 @@ index bd95df5..4bf64f7 100644
  DATABASE_URL="mysql://root@127.0.0.1:3306/testing${TEST_TOKEN}?serverVersion=5.7"
 +PANTHER_WEB_SERVER_PORT=908${TEST_TOKEN}
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index 39fbb73..9915607 100644
+index c9e9997..1079f04 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
-@@ -33,7 +33,9 @@ class ProductControllerTest extends PantherTestCase
+@@ -32,7 +32,9 @@ class ProductControllerTest extends PantherTestCase
      {
-         ProductFactory::new()->create(['name' => 'Floppy Disk']);
-         ProductFactory::new()->create(['name' => 'Compact Disk']);
+         ProductFactory::createOne(['name' => 'Floppy Disk']);
+         ProductFactory::createOne(['name' => 'Compact Disk']);
 -        $this->pantherBrowser()
 +        $this->pantherBrowser([], [], [
 +            'port' => (int) (9515 + getenv('TEST_TOKEN')),

@@ -1,5 +1,5 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index 235012a..c69474f 100644
+index 235012a..a30c7c2 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
 @@ -2,6 +2,7 @@
@@ -10,7 +10,7 @@ index 235012a..c69474f 100644
  use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
  use Zenstruck\Foundry\Test\Factories;
  use Zenstruck\Foundry\Test\ResetDatabase;
-@@ -10,12 +11,20 @@ class ProductControllerTest extends WebTestCase
+@@ -10,12 +11,18 @@ class ProductControllerTest extends WebTestCase
  {
      use Factories, ResetDatabase;
  
@@ -19,9 +19,7 @@ index 235012a..c69474f 100644
      {
          $client = static::createClient();
 -        $crawler = $client->request('GET', '/');
-+        $product = ProductFactory::new()->create([
-+            'name' => 'Brand new popcorn'
-+        ]);
++        $product = ProductFactory::createOne(['name' => 'Brand new popcorn']);
 +        $crawler = $client->request('GET', sprintf('/product/%s/edit', $product->getId()));
 +
 +        $client->submitForm('Update', [

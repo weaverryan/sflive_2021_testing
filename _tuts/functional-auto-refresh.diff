@@ -1,13 +1,14 @@
 diff --git a/tests/Controller/ProductControllerTest.php b/tests/Controller/ProductControllerTest.php
-index c69474f..93ac4c4 100644
+index a30c7c2..98529db 100644
 --- a/tests/Controller/ProductControllerTest.php
 +++ b/tests/Controller/ProductControllerTest.php
-@@ -16,7 +16,7 @@ class ProductControllerTest extends WebTestCase
+@@ -14,7 +14,8 @@ class ProductControllerTest extends WebTestCase
+     public function testEditProduct(): void
+     {
          $client = static::createClient();
-         $product = ProductFactory::new()->create([
-             'name' => 'Brand new popcorn'
--        ]);
-+        ])->enableAutoRefresh();
+-        $product = ProductFactory::createOne(['name' => 'Brand new popcorn']);
++        $product = ProductFactory::createOne(['name' => 'Brand new popcorn'])
++            ->enableAutoRefresh();
          $crawler = $client->request('GET', sprintf('/product/%s/edit', $product->getId()));
  
          $client->submitForm('Update', [

@@ -1,5 +1,5 @@
 diff --git a/tests/Repository/ProductRepositoryTest.php b/tests/Repository/ProductRepositoryTest.php
-index db1edb7..9ec428d 100644
+index db1edb7..76f8be1 100644
 --- a/tests/Repository/ProductRepositoryTest.php
 +++ b/tests/Repository/ProductRepositoryTest.php
 @@ -2,16 +2,27 @@
@@ -22,9 +22,9 @@ index db1edb7..9ec428d 100644
          $productRepository = self::$container->get(ProductRepository::class);
          $this->assertInstanceOf(ProductRepository::class, $productRepository);
 +
-+        ProductFactory::new()->create(['name' => 'floppy disk']);
-+        ProductFactory::new()->create(['name' => 'popcorn']);
-+        ProductFactory::new()->create(['description' => 'A CD (compact disk)']);
++        ProductFactory::createOne(['name' => 'floppy disk']);
++        ProductFactory::createOne(['name' => 'popcorn']);
++        ProductFactory::createOne(['description' => 'A CD (compact disk)']);
 +
 +        $results = $productRepository->search('disk');
 +        $this->assertCount(2, $results);
