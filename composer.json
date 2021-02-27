@@ -32,7 +32,8 @@
         "symfony/yaml": "5.2.*",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/intl-extra": "^3.2",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^2.12|^3.0",
+        "zenstruck/foundry": "^1.7"
     },
     "config": {
         "optimize-autoloader": true,
