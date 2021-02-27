@@ -6,10 +6,11 @@ use App\Factory\ProductFactory;
 use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Zenstruck\Foundry\Test\Factories;
+use Zenstruck\Foundry\Test\ResetDatabase;
 
 class ProductRepositoryTest extends KernelTestCase
 {
-    use Factories;
+    use Factories, ResetDatabase;
 
     public function testSearch(): void
     {
